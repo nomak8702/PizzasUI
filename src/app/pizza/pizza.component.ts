@@ -23,10 +23,10 @@ export class Pizza {
 export class PizzaComponent implements OnInit {
 
  pizzas: Pizza[];
- private httpClient:HttpClient;
+
 
   constructor(
-  httpClient: HttpClient
+  private httpClient: HttpClient
   ) { }
 
   ngOnInit(): void {

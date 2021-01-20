@@ -7,13 +7,21 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HomeComponent} from './home/home.component';
 import {PizzaComponent} from './pizza/pizza.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PizzaComponent
+    PizzaComponent,
+    CartComponent,
+    CartItemComponent
+
+
   ],
   imports: [
     BrowserModule,
