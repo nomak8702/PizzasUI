@@ -91,6 +91,22 @@ export class AdminComponent implements OnInit {
       backdrop: 'static',
       size: 'lg'
     });
+      this.editForm.patchValue( {
+        id: pizza.id,
+        name: pizza.name,
+        description: pizza.description,
+        weight: pizza.weight,
+        price: pizza.price
+      });
+  }
+
+  onSave() {
+    const editURL = 'http://localhost:9001/pizzas/' + this.editForm.value.id + '/edit';
+    this.httpClient.put(editURL, this.editForm.value)
+      .subscribe((results) => {
+        this.ngOnInit();
+        this.modalService.dismissAll();
+      });
   }
 
 }

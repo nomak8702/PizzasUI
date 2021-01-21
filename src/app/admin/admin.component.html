@@ -94,33 +94,33 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="name">Firstname</label>
+        <label for="name">Nume</label>
         <div class="input-group">
           <input formControlName="name" class="form-control">
         </div>
       </div>
       <div class="form-group">
-        <label for="description">Lastname</label>
+        <label for="description">Descriere</label>
         <div class="input-group">
           <input formControlName="description" class="form-control">
         </div>
       </div>
       <div class="form-group">
-        <label for="weight">Department</label>
+        <label for="weight">Gramaj</label>
         <div class="input-group">
           <input formControlName="weight" class="form-control">
         </div>
       </div>
       <div class="form-group">
-        <label for="price">Email</label>
+        <label for="price">Pret</label>
         <div class="input-group">
           <input formControlName="price" class="form-control">
         </div>
       </div>
-      <div class="border text-center"> <button data-dismiss="modal" class="btn btn-info">Save Changes</button> </div>
+      <div class="border text-center"> <button data-dismiss="modal" class="btn btn-info" (click)="onSave()">Save Changes</button> </div>
     </form>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Iesire</button>
     </div>
   </div>
 </ng-template>
