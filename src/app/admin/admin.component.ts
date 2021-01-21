@@ -30,6 +30,7 @@ export class AdminComponent implements OnInit {
  closeResult: string;
  editForm: FormGroup;
  private deleteId: number;
+  message: string;
 
 
   constructor(
@@ -85,6 +86,12 @@ export class AdminComponent implements OnInit {
         this.ngOnInit();
       });
     this.modalService.dismissAll();
+      if (f.valid) {
+           this.message = '';
+         }
+         if (f.invalid){
+           this.message = 'Introdus gresit!';
+         }
   }
 
   openEdit(targetModal, pizza: Pizza) {

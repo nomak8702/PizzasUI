@@ -1,3 +1,4 @@
+<div class="jumbotron grey" style="hight:700px; ">
 <div class="container">
   <div class="border">
     <button class="btn btn-md btn-outline-success" (click)="open(content)">
@@ -40,40 +41,45 @@
     </button>
   </div>
   <div class="modal-body">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
       <div class="form-group">
         <label for="name">Nume</label>
         <div class="input-group">
-          <input id="name" name="name" class="form-control" ngModel>
+          <input  id="name" name="name" class="form-control" required ngModel #name="ngModel">
         </div>
+        <span class="error" *ngIf="name.invalid && name.touched" class="error">Adauga un nume pentru Pizza!</span>
       </div>
 
       <div class="form-group">
         <label for="description">Descriere</label>
         <div class="input-group">
-          <input id="description" name="description" class="form-control" ngModel>
+          <input id="description" name="description" class="form-control" required  ngModel #description="ngModel">
         </div>
+        <span class="error" *ngIf="description.invalid && description.touched" class="error">Adauga ingredientele pentru Pizza!</span>
       </div>
 
       <div class="form-group">
         <label for="weight">Gramaj</label>
         <div class="input-group">
-          <input id="weight" name="weight" class="form-control" ngModel>
+          <input id="weight" name="weight" class="form-control" required  ngModel #weight="ngModel">
         </div>
+        <span class="error" *ngIf="weight.invalid && weight.touched" class="error">Adauga gramajul pizzei!(ex: 650 g.)</span>
       </div>
 
       <div class="form-group">
         <label for="price">Pret</label>
         <div class="input-group">
-          <input id="price" name="price" class="form-control" ngModel>
+          <input id="price" name="price" class="form-control" required  ngModel #price="ngModel">
         </div>
+        <span class="error" *ngIf="weight.invalid && price.touched" class="error">Adauga pretu pizzei!(ex: 25)</span>
       </div>
       <div class="border text-center">
-        <button data-dismiss="modal" class="btn btn-info">Submit</button>
+        <button data-dismiss="modal" class="btn btn-info">Adauga</button>
       </div>
     </form>
   </div>
   <div class="modal-footer">
+
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Iesire</button>
   </div>
 </ng-template>
@@ -133,7 +139,7 @@
     </button>
   </div>
   <div class="modal-body">
-    <h2>Sigur stergi!</h2>
+    <h2>Sigur stergi?</h2>
     <div class="border text-center">
       <button data-dismiss="modal" class="btn btn-danger" (click)="onDelete()">Da, sterge!</button>
     </div>
@@ -142,6 +148,8 @@
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Iesire</button>
   </div>
 </ng-template>
+
+</div>
 
 
 
