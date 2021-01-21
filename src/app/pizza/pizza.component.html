@@ -8,7 +8,7 @@
 
           <div class="card-body">
             <p class="card-text">
-              <strong>{{pizza.price|number:'1.2-2'}} RON</strong>
+              <strong>{{pizza.price|number:'1.1-2'}} RON</strong>
             </p>
             <p class="card-text">
               <strong>Pizza {{pizza.name}} </strong></p>
@@ -16,7 +16,8 @@
             <p class="card-text"><strong>{{pizza.weight}}</strong></p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-info product-btn">Adauga</button>
+                <button type="button" class="btn btn-sm btn-info product-btn"
+                (click)="handleAddToCart()">Adauga</button>
                 <br>
               </div>
             </div>

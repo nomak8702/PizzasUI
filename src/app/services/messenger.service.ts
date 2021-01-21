@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs';
+import {Product} from 'src/app/models/product';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,9 @@ subject = new Subject()
 
   constructor() {  }
 
-    sendMsg(pizza){
-     this.subject.next()
+    sendMsg(product){
+    console.log(product)
+     this.subject.next(product)
 
     }
 

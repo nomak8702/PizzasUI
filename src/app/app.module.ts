@@ -9,6 +9,8 @@ import {PizzaComponent} from './pizza/pizza.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { AdminComponent } from './admin/admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +21,9 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     HomeComponent,
     PizzaComponent,
     CartComponent,
-    CartItemComponent
+    CartItemComponent,
+    AdminComponent
+
 
 
   ],
@@ -27,7 +31,11 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
