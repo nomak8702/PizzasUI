@@ -29,6 +29,8 @@ export class AdminComponent implements OnInit {
  pizzas: Pizza[];
  closeResult: string;
  editForm: FormGroup;
+ private deleteId: number;
+
 
   constructor(
   private httpClient: HttpClient,
@@ -109,4 +111,20 @@ export class AdminComponent implements OnInit {
       });
   }
 
+  openDelete(targetModal, pizza: Pizza) {
+    this.deleteId = pizza.id;
+    this.modalService.open(targetModal, {
+      backdrop: 'static',
+      size: 'lg'
+    });
+  }
+
+  onDelete() {
+    const deleteURL = 'http://localhost:9001/pizzas/' + this.deleteId + '/delete';
+    this.httpClient.delete(deleteURL)
+      .subscribe((results) => {
+        this.ngOnInit();
+        this.modalService.dismissAll();
+      });
+  }
 }
