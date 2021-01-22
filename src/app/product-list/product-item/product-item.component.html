@@ -1,1 +1,20 @@
-<p>product-item works!</p>
+
+<div class="card mb-4 shadow-sm">
+  <img class="bd-placeholder-img card-img-top" width="100%"
+       src="assets\index.jpg"/>
+
+  <div class="card-body">
+    <p class="card-text">
+      <strong>{{productItem.price|number:'1.1-2'}} RON</strong>
+    </p>
+    <p class="card-text">
+      <strong>{{productItem.name}} </strong></p>
+    <p class="card-text">{{productItem.description}}&nbsp;</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart()">Adauga
+          </button>
+      </div>
+    </div>
+  </div>
+</div>

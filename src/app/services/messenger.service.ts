@@ -11,9 +11,9 @@ subject = new Subject()
 
   constructor() {  }
 
-    sendMsg(pizza){
-    console.log(pizza)
-     this.subject.next(pizza)
+    sendMsg(product){
+    console.log(product)
+     this.subject.next(product)
 
     }
 

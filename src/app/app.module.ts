@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
+import { GridProductComponent } from './grid-product/grid-product.component';
 
 
 
@@ -29,7 +30,8 @@ import { ProductItemComponent } from './product-list/product-item/product-item.c
     AdminComponent,
     ContactComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    GridProductComponent
   ],
   imports: [
     BrowserModule,

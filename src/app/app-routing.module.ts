@@ -5,10 +5,11 @@ import {PizzaComponent} from './pizza/pizza.component';
 import {AdminComponent} from './admin/admin.component';
 import {ContactComponent} from './contact/contact.component';
 import {ProductListComponent} from './product-list/product-list.component';
+import {GridProductComponent} from './grid-product/grid-product.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'pizzas', component: ProductListComponent},
+  {path: 'pizzas', component: GridProductComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'contact', component: ContactComponent},
   {path: '', component: HomeComponent}
