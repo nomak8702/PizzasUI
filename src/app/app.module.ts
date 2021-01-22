@@ -12,6 +12,8 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductItemComponent } from './product-list/product-item/product-item.component';
 
 
 
@@ -25,7 +27,9 @@ import { ContactComponent } from './contact/contact.component';
     CartComponent,
     CartItemComponent,
     AdminComponent,
-    ContactComponent
+    ContactComponent,
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
