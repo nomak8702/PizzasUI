@@ -8,4 +8,36 @@
     Total : {{ cartTotal|number:'1.1-2'}} RON
   </li>
 
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"
+          id="modal-basic-title">
+        Pizza Online
+      </h4>
+      <button type="button" class="close"
+              aria-label="Close" (click)=
+                "modal.dismiss('Cross click')">
+            <span aria-hidden="true">
+                 <h2>Comanda preluata!</h2>
+            </span>
+      </button>
+    </div>
+    <div class="modal-footer">
+      <button type="button"
+              class="btn btn-outline-dark"
+              (click)="modal.close('Save click')">
+        Iesire
+      </button>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-lg btn-outline-succes"
+          (click)="open(content)">
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    Trimite Comanda
+  </button>
 </ul>
+
+
+

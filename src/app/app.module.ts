@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
 import { GridProductComponent } from './grid-product/grid-product.component';
+import { CosComponent } from './cos/cos.component';
 
 
 
@@ -31,7 +32,8 @@ import { GridProductComponent } from './grid-product/grid-product.component';
     ContactComponent,
     ProductListComponent,
     ProductItemComponent,
-    GridProductComponent
+    GridProductComponent,
+    CosComponent
   ],
   imports: [
     BrowserModule,
