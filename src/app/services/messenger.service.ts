@@ -11,9 +11,9 @@ subject = new Subject()
 
   constructor() {  }
 
-    sendMsg(product){
-    console.log(product)
-     this.subject.next(product)
+    sendMsg(pizza){
+    console.log(pizza)
+     this.subject.next(pizza)
 
     }
 
@@ -21,6 +21,5 @@ subject = new Subject()
 return this.subject.asObservable()
 
     }
-
 
 }

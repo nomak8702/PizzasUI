@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {MessengerService} from 'src/app/services/messenger.service';
 import {Product} from 'src/app/models/product';
@@ -16,7 +16,6 @@ export class Pizza {
   ) {
   }
 }
-
 @Component({
   selector: 'app-pizza',
   templateUrl: './pizza.component.html',
@@ -24,8 +23,10 @@ export class Pizza {
 })
 export class PizzaComponent implements OnInit {
 
+
+
  pizzas: Pizza[];
- pizzaItem: Product;
+ pizza: Pizza;
 
 
 
@@ -39,14 +40,17 @@ export class PizzaComponent implements OnInit {
   }
 
   handleAddToCart(){
-  this.msg.sendMsg(this.pizzas)
+  //console.log(this.pizzas);
+  this.msg.sendMsg(this.pizzas);
   }
 
+
+
   getPizza(){
-   this.httpClient.get<any>('http://localhost:9001/pizzas').subscribe(
+   this.httpClient.get<any>('http://localhost:9001/pizzas/').subscribe(
         response => {
-          console.log(response);
-          this.pizzas = response;
+         console.log(response);
+          this.pizza = response;
         }
       );
 
