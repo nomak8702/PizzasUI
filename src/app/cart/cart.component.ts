@@ -8,7 +8,10 @@ import {MessengerService} from 'src/app/services/messenger.service';
 export class CartComponent implements OnInit {
 
 cartItems = [
-
+{id:1,qty:4,price:100},
+{id:2,qty:5,price:100},
+{id:3,qty:3,price:100},
+{id:4,qty:2,price:100}
 
 ];
 

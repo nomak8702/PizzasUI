@@ -12,7 +12,7 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
-import { CosComponent } from './cos/cos.component';
+
 
 
 
@@ -25,11 +25,7 @@ import { CosComponent } from './cos/cos.component';
     CartComponent,
     CartItemComponent,
     AdminComponent,
-    ContactComponent,
-    CosComponent
-
-
-
+    ContactComponent
   ],
   imports: [
     BrowserModule,
