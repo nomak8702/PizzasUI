@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PizzasUI';
+  message="Welcom to the good code"
 
 }

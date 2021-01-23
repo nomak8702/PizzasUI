@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 import {MessengerService} from 'src/app/services/messenger.service';
 import {Product} from 'src/app/models/product';
 import { CartItemComponent } from 'src/app/cart/cart-item/cart-item.component';
@@ -29,11 +29,17 @@ cartTotal =0;
   constructor(private msg: MessengerService,
    private modalService: NgbModal
   ) { }
+  message="Hello from the Other Side"
+  @Output() event= new EventEmitter<string>()
 
   ngOnInit() {
 this.msg.getMsg().subscribe((product: Product) =>{
 this.addProductToCart(product)
 })
+  }
+
+  sendMessage(){
+  this.event.emit(this.message)
   }
 
  addProductToCart(product: Product){
